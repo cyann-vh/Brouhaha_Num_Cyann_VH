@@ -1,0 +1,111 @@
+p{
+position: relative;
+top : 200px;
+left : 20px;
+background-color:rgb(13, 1, 25);
+width: 200px;
+ margin-bottom: -1px;
+ transition: transform 2s;
+ 
+}
+
+
+
+.gothic{
+
+  animation-name : llition;
+animation-duration : 1.5s;
+animation-iteration-count : infinite;
+animation-direction : alternate;
+
+    font-family : "Goth";
+    font-size : 12vw;
+    color: rgb(165, 43, 165);
+     text-align:center;
+
+}
+
+.gothic:hover{
+  color: rgb(228, 218, 30);
+  opacity: 10%;
+transform: translateY(100px);
+}
+
+
+@keyframes llition{
+from {
+   transform: scale(0.8);
+  }
+
+  to {
+   transform: scale(1);
+  }
+}
+
+
+
+.bold{
+
+    animation-name : ebbu;
+animation-duration : 1.5s;
+animation-iteration-count : infinite;
+animation-direction : alternate;
+
+    filter:drop-shadow(60px 25px 50px rgb(255, 242, 0));
+    opacity: 50%;
+    font-family : "Banner";
+    font-size : 10vw;
+    color: rgb(214, 13, 154);
+     text-align: right;
+
+}
+
+
+.bold:hover{
+    color: rgb(220, 210, 29);
+  opacity: 10%;
+transform: translateY(-100px)
+}
+
+
+@keyframes ebbu{
+from {
+   transform: scale(0.8);
+  }
+
+  to {
+   transform: scale(1);
+  }
+}
+
+
+@font-face {
+  font-family: "Goth"; 
+  src: url("../UnormativeFraktur.otf");  
+}
+
+@font-face {
+  font-family: "Banner"; 
+  src: url("../HyperScrypt.otf"); 
+}
+
+
+body {
+    background-color: rgb(224, 62, 183);
+  width: 100%;
+  display: grid;
+   overflow-x: hidden;
+  grid-template-columns: repeat(40, 20px); 
+  gap: 100px; 
+  grid-auto-rows: 10px; 
+}
+
+header {
+  opacity: 25%;
+  font-family : "Goth";
+  position: absolute;
+  width: 250vw;
+  background-color: rgb(38, 15, 52);
+  padding: 5px;
+  z-index: 10;
+}

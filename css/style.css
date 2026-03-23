@@ -1,0 +1,185 @@
+p{
+
+position: relative;
+top : 100px;
+left : 100px;
+background-color:azure;
+width: 700px;
+ margin-bottom: 20px
+
+    /* animation-iteration-count: 1; /*nombre d'itération de l'animation*/
+  /* animation-direction: alternate;lire l'animation dans un sens puis dans l'autre */
+  /* animation-fill-mode: forwards;si l'animation doit se terminer elle garde sa valeur finale */
+	/* animation-delay : 0s;faire démarer une animation un peu en retard */
+}
+
+
+
+
+
+.grand{
+
+    filter:drop-shadow(60px 25px 50px blue);
+    font-family : "Goozette";
+    font-size : 75px;
+    color: blue;
+     text-align: right;
+
+       animation-name : opacity; /*Une même animation pour tous les blocs de texte*/
+animation-duration : 2s;
+animation-iteration-count : infinite;
+animation-direction : alternate;
+}
+
+@keyframes opacity{
+
+
+  0%{ /*ici on renseigne la valeur de départ*/
+    opacity: 15%;
+  }
+  
+   50%{ /*ici on renseigne une valeur médiane*/
+    opacity : 45%; 
+  }
+
+  100%{/*ici on renseigne la valeur de fin*/
+    opacity : 80%; 
+  }
+}
+
+.moyen{
+
+  filter:opacity(80%);
+  font-family : "fleurs";
+    font-size : 80px;
+    color:rgba(255, 33, 17, 0.918);
+     text-align: justify;
+
+
+}
+
+.petit{
+
+    font-family : "small";
+    font-size : 10px;
+    background-size:contain;
+    color: rgb(255, 102, 0);
+     text-align: left;
+     text-decoration:underline;
+
+     
+
+}
+
+
+/* .petit:hover{     
+
+  background-color: brown;
+  transition-duration: 2s;
+} */
+
+/* UTILISER CA AVEC UN FOND NOIR OU LES LETTRES APARAISSENT EN UNE COULEUR FLASH */
+
+
+.barre{
+
+
+  animation-name : filterbrightness, defilement, taille; /*Une même animation pour tous les blocs de texte*/
+animation-duration : 3s;
+animation-iteration-count : infinite;
+animation-direction : alternate;
+/*animation-delay : 3s;faire démarer une animation un peu en retard*/
+
+
+
+    font-family : "barre";
+    font-size : 240px;
+    color: rgb(255, 102, 0);
+    background-color:transparent;
+     text-align: justify;
+
+}
+
+@keyframes filterbrightness{
+
+
+  0%{ 
+   filter: brightness(100%);
+  }
+
+  30%{ 
+   filter: brightness(135%);
+  }
+  
+   65%{ 
+  filter: brightness(180%);
+  }
+
+   100%{ 
+  filter: brightness(210%);
+  }
+
+}
+
+@keyframes defilement{
+
+ 0%{ /*ici on renseigne la valeur de départ*/
+   transform : translateX(100%);
+ }
+  
+
+   100%{ /*ici on renseigne une valeur médiane*/
+  transform : translateX(-100%);
+  }
+
+}
+
+
+
+main{
+
+    display: none;
+
+}
+
+@font-face {
+  font-family: "Goozette"; 
+  src: url("../Goozette.otf"); 
+}
+
+@font-face {
+  font-family: "small";
+  src: url("../Steps-Mono-Thin.otf"); 
+
+}
+
+@font-face {
+  font-family: "barre";
+  src: url("../barre.ttf"); 
+
+}
+
+  @font-face {
+  font-family: "fleurs";
+  src: url("../fleurs.ttf");  
+
+}
+
+
+body {
+    background-color: rgb(16, 3, 37);
+  width: 900px;
+  display: grid;
+  grid-template-columns: repeat(50, 80px); /*nbr + taille collones */
+  gap: 60px; /*gouttières */
+  grid-auto-rows: 90px; /*hauteurs des lignes */
+}
+
+header {
+  opacity: 30%;
+  position: absolute;
+  font-family : "Goozette";
+  width: 50vw;
+  background-color: rgb(28, 14, 107);
+  padding: 5px;
+}
